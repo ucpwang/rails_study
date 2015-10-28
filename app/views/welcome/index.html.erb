@@ -5,8 +5,13 @@
 <br>
 <div>
   <ul>
-    <li>2015.10.28 수요일 / jacob.c 진도 현황 -> <a href="https://rorlab.gitbooks.io/railsguidebook/content/contents/walkthrough/model_association.html">5.7</a></li>
+    <li>
+      2015.10.28 수요일 / jacob.c 진도 현황 -> <%= link_to "5.7", "https://rorlab.gitbooks.io/railsguidebook/content/contents/walkthrough/model_association.html" %>
+    </li>
+    <li>
+      2015.10.29 목요일 / jacob.c 진도 현황 -> <%= link_to "5.10", "https://rorlab.gitbooks.io/railsguidebook/content/contents/walkthrough/bulletin_type.html" %>
+    </li>
   </ul>
 </div>
 <br>
-<%= link_to "글작성", new_post_path, class:'btn btn-default' %> <%= link_to "글목록", posts_path, class:'btn btn-default' %>
+<%= link_to "글작성", bulletin_posts_path('1'), class:'btn btn-default' %>
