@@ -9,30 +9,6 @@ gem 'rails', '4.1.4'
 # Fix the conflict with the system 'rake':
 gem 'rake', '~> 0.9.6'
 
-# Support for databases and environment.
-# Use 'sqlite3' for testing and development and mysql and postgresql
-# for production.
-#
-# To speed up the 'git push' process you can exclude gems from bundle install:
-# For example, if you use rails + mysql, you can:
-#
-# $ rhc env set BUNDLE_WITHOUT="development test postgresql"
-#
-group :development, :test do
-  gem 'sqlite3'
-  gem 'minitest'
-  gem 'thor'
-end
-
-# Add support for the MySQL
-group :production, :mysql do
-  gem 'mysql2'
-end
-
-group :production, :postgresql do
-  gem 'pg'
-end
-
 ### / OpenShift changes
 
 # Use SCSS for stylesheets
@@ -70,13 +46,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'font-awesome-rails'
 
-group :development, :test do
-
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-
-end
-
 group :development do
 
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -98,4 +67,30 @@ group :development do
   # https://rubygems.org/gems/logger-colors/versions/1.0.0
   gem 'logger-colors'
 
+end
+
+# Support for databases and environment.
+# Use 'sqlite3' for testing and development and mysql and postgresql
+# for production.
+#
+# To speed up the 'git push' process you can exclude gems from bundle install:
+# For example, if you use rails + mysql, you can:
+#
+# $ rhc env set BUNDLE_WITHOUT="development test postgresql"
+#
+group :development, :test do
+  gem 'sqlite3'
+  gem 'minitest'
+  gem 'thor'
+
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
+end
+
+group :production, :mysql do
+  gem 'mysql2'
+end
+
+group :production, :postgresql do
+  gem 'pg'
 end
