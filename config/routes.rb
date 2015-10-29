@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'comments/create'
+
+  get 'comments/destroy'
+
   resources :bulletins do
     resources :posts
   end

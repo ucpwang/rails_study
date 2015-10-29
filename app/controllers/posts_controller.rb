@@ -51,6 +51,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def post_params
+    params.require(:post).permit(:title, :content, :picture, :picture_cache)
+  end
+
   private
     def set_bulletin
       @bulletin = Bulletin.find(params[:bulletin_id])
