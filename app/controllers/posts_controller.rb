@@ -51,10 +51,6 @@ class PostsController < ApplicationController
     end
   end
 
-  def post_params
-    params.require(:post).permit(:title, :content, :picture, :picture_cache, :tag_list)
-  end
-
   private
     def set_bulletin
       @bulletin = Bulletin.find(params[:bulletin_id])
@@ -65,6 +61,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :content)
+      params.require(:post).permit(:title, :content, :picture, :picture_cache, :tag_list)
     end
 end
