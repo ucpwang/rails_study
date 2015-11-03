@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20151103025654) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "bulletin_id"
+    t.integer  "bulletin_id", default: 3
     t.string   "picture"
   end
 
