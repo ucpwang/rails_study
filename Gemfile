@@ -39,12 +39,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'bootstrap-sass', '~> 3.3.3'
-
 gem 'simple_form', '3.1.0'
-
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'font-awesome-rails'
+gem 'acts-as-taggable-on'
 
 group :development do
 
