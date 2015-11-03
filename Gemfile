@@ -68,17 +68,9 @@ group :development do
 
 end
 
-# Support for databases and environment.
-# Use 'sqlite3' for testing and development and mysql and postgresql
-# for production.
-#
-# To speed up the 'git push' process you can exclude gems from bundle install:
-# For example, if you use rails + mysql, you can:
-#
-# $ rhc env set BUNDLE_WITHOUT="development test postgresql"
-#
+gem 'sqlite3'
+
 group :development, :test do
-  gem 'sqlite3'
   gem 'minitest'
   gem 'thor'
 
@@ -86,10 +78,10 @@ group :development, :test do
   gem 'byebug'
 end
 
-group :production, :mysql do
-  gem 'mysql2'
-end
-
-group :production, :postgresql do
-  gem 'pg'
-end
+# group :production, :mysql do
+#   gem 'mysql2'
+# end
+#
+# group :production, :postgresql do
+#   gem 'pg'
+# end
