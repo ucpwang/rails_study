@@ -101,8 +101,6 @@ GEM
     mini_magick (4.3.6)
     minitest (5.8.2)
     multi_json (1.11.2)
-    mysql2 (0.4.1)
-    pg (0.18.3)
     polyglot (0.3.5)
     rack (1.5.5)
     rack-contrib (1.4.0)
@@ -200,8 +198,6 @@ DEPENDENCIES
   meta_request
   mini_magick
   minitest
-  mysql2
-  pg
   rails (= 4.1.4)
   rake (~> 0.9.6)
   sass-rails (~> 4.0.3)
